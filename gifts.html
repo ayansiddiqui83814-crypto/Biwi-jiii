@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Special Gifts ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:'Georgia', serif;
+background:linear-gradient(to bottom,#4facfe,#fbc2eb,#ffffff);
+text-align:center;
+color:#2c3e50;
+overflow-x:hidden;
+}
+
+.section{
+padding:60px 20px;
+animation:fadeIn 2s ease-in-out;
+}
+
+h1{
+font-size:38px;
+margin-bottom:20px;
+}
+
+img{
+width:80%;
+max-width:450px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.4);
+margin:25px 0;
+transition:0.5s;
+}
+
+img:hover{
+transform:scale(1.05);
+}
+
+p{
+max-width:800px;
+margin:auto;
+font-size:20px;
+line-height:2;
+}
+
+button{
+margin-top:30px;
+padding:14px 30px;
+font-size:18px;
+border-radius:40px;
+border:none;
+background:#ff6b81;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff4757;
+transform:scale(1.05);
+}
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.heart{
+position:absolute;
+color:#ff6b81;
+animation:floatUp 6s linear infinite;
+}
+
+@keyframes floatUp{
+0%{transform:translateY(100vh);opacity:1;}
+100%{transform:translateY(-10vh);opacity:0;}
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+.secret{
+display:none;
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- GIFT 1 SECTION -->
+<div class="section">
+<h1>🎁 Gift No.1 – Our Ship 🚢</h1>
+
+<img src="IMG_20260227_004545.jpg">
+
+<p>
+Iqra, this ship represents us.  
+We are in the same ship crossing the ocean of life together.  
+
+There will be waves 🌊  
+There will be storms ⛈️  
+There will be difficult days…  
+
+But as long as we are together,  
+we will cross every ocean.  
+
+Our love will be our anchor ⚓  
+Our trust will be our sail.  
+And no storm will ever be stronger than us.
+</p>
+
+<button onclick="document.getElementById('secret1').style.display='block'">
+Open Secret Message 💌
+</button>
+
+<p id="secret1" class="secret">
+No matter how big the ocean is, I choose you as my forever ❤️
+</p>
+</div>
+
+<hr style="width:70%; margin:auto;">
+
+<!-- GIFT 2 SECTION -->
+<div class="section">
+<h1>🎁 Gift No.2 – The Diary of Us 📖</h1>
+
+<img src="diary.jpg">
+
+<p>
+You love writing in your diary.  
+Every day you write your feelings, your thoughts, your little secrets…  
+and sometimes about us.  
+
+Our school memories.  
+Our bunks.  
+Our lunch together.  
+The way we held hands and talked endlessly.  
+
+Your diary is not just pages —  
+it is where our love story is written in your handwriting.  
+
+That’s why I gifted you this diary.  
+Because I don’t just want to be a memory…  
+I want to be a chapter.  
+I want to be pages.  
+I want to be the whole story.
+</p>
+
+<button onclick="document.getElementById('secret2').style.display='block'">
+Open Secret Message 💌
+</button>
+
+<p id="secret2" class="secret">
+One day your diary won’t just hold memories… it will hold our forever ❤️
+</p>
+
+</div>
+
+<div class="hearts"></div>
+
+<script>
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=Math.random()*20+15+"px";
+heart.style.animationDuration=Math.random()*3+3+"s";
+document.querySelector(".hearts").appendChild(heart);
+setTimeout(()=>{heart.remove();},6000);
+}
+setInterval(createHeart,500);
+</script>
+
+</body>
+</html>
